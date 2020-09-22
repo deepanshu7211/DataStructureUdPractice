@@ -130,4 +130,5 @@ public class StringQuestions {
         System.out.println(" lenght using count " + count);
         System.out.println(" lenght using length func " + str.length());
     }
+    
 }
