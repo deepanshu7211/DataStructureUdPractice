@@ -13,6 +13,7 @@ public class LinkedList {
         linkedList.add(6);
         linkedList.traverse();
         linkedList.traverseRecursively(linkedList.head);
+        System.out.println();
         System.out.println(" Length " + linkedList.length(linkedList.head));
         System.out.println(" max " + linkedList.max(linkedList.head));
         System.out.println(" search " + linkedList.search(linkedList.head,5));
@@ -29,12 +30,37 @@ public class LinkedList {
         linkedList.traverse();
 
         linkedList.reverse();
-        System.out.println("\n Reversed Linked List ");
+        System.out.println("\n Reversed Linked List using iterative method ");
         linkedList.traverse();
 
         linkedList.reverseUsingRecursion(linkedList.head);
         System.out.println("\n Reversed Linked List using Recursion");
         linkedList.traverse();
+
+        System.out.println("\n Reversed K group nodes in Linked List using Recursion");
+        Node newHead = linkedList.reverseKNodes(linkedList.head,3);
+        linkedList.head =newHead;
+        linkedList.traverse();
+    }
+
+    private Node reverseKNodes(Node head,int k){
+        Node cn=head;
+        Node prev=null,next=null;
+        int count = 0;
+
+        while (cn!=null && count<k){
+            next=cn.getNext();
+            cn.setNext(prev);
+            prev=cn;
+            cn=next;
+            count++;
+        }
+
+        if(next!=null){
+            Node rest_head = reverseKNodes(next,k);
+            head.setNext(rest_head);
+        }
+        return prev;
     }
 
     private void reverseUsingRecursion(Node currentNode) {
@@ -156,7 +182,7 @@ public class LinkedList {
         }
         else {
             traverseRecursively(currentNode.getNext());
-            System.out.println(" Node data " + currentNode.getData());
+//            System.out.println(" Node data " + currentNode.getData());
 
         }
     }

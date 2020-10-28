@@ -1,17 +1,14 @@
 package linked_list;
 
-public class Node {
+public class CLLNode {
+
     private int data;
-    private Node next;
+    private CLLNode next;
 
-    public Node(){
-
-    }
-
-    public Node(int data) {
+    public CLLNode(int data) {
         this.data = data;
-        this.next = null;
     }
+
 
     public int getData() {
         return data;
@@ -21,13 +18,11 @@ public class Node {
         this.data = data;
     }
 
-    public Node getNext() {
+    public CLLNode getNext() {
         return next;
     }
 
-    public void setNext(Node next) {
+    public void setNext(CLLNode next) {
         this.next = next;
     }
-
-
 }
