@@ -25,9 +25,9 @@ public class CountDistictElementInEveryWindow {
                 if(0 == (int)map.get(arr[i - k]))
                     map.remove(arr[i-k]);
             }
-            if(!map.containsKey(arr[i])){
-                map.put(arr[i],map.getOrDefault(arr[i],0)+1);
-            }
+            //if(!map.containsKey(arr[i])){
+                map.put(arr[i],map.getOrDefault(arr[i],1)+1);
+          //  }
 //            Printing the size for every window
             System.out.println(map.size());
         }

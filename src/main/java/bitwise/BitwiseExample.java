@@ -67,8 +67,8 @@ public class BitwiseExample {
     }
 
 //    It means we need to check how many bits are 1 in a number
-//    When we subract 1 from a number then all the zero after the left most bit becomes 1's and
-//    the left most bit becomes 0's ( Brian kriningam's algorithm )
+//    When we subtract 1 from a number then all the zero after the right most bit becomes 1's and
+//    the right most bit becomes 0's ( Brian kriningam's algorithm )
     /*
     *  40 = 101000
     *  39 = 100111

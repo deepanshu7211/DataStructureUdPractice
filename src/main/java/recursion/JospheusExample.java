@@ -4,7 +4,7 @@ public class JospheusExample {
 
 
     public static void main(String args[]) {
-        System.out.println(myJos(5, 3));
+        System.out.println(jos(5, 3));
     }
 
     static int jos(int n, int k) {

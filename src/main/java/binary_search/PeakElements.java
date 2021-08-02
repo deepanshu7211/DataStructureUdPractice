@@ -25,7 +25,7 @@ public class PeakElements {
                 System.out.println(" find the peak " + mid + " " + arr[mid]);
                 break;
             }
-//            If element in the left side is greater then ther is a chance that peak element can exist in
+//            If element in the left side is greater then there is a chance that peak element can exist in
 //            the left hand side of the array
             else if(arr[mid-1]>arr[mid]){
                 high=mid-1;

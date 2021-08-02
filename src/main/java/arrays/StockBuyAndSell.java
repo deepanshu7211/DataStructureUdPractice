@@ -4,6 +4,7 @@ public class StockBuyAndSell {
     public static void main(String[] args) {
         maxProfit();
         buyAndSell();
+        maxProfit2();
     }
 
 //    We know the prices of stocks for the coming days. We need to maximize the profit.
@@ -23,6 +24,22 @@ public class StockBuyAndSell {
 
     }
 
+
+    private static void maxProfit2(){
+//        int price[]={1,5,3,8,12};
+        int price[]={5,2,6,1,4};
+        int maxProfit=0;
+        int minSoFar=price[0];
+
+        for(int i=0;i<price.length;i++){
+            minSoFar = Math.min(minSoFar,price[i]);
+            int profit = price[i]-minSoFar;
+            maxProfit = Math.max(maxProfit,profit);
+        }
+
+        System.out.println(" Profit :: " + maxProfit);
+
+    }
     private static void buyAndSell(){
         int arr[]={100,180,260,310,40,535,695};
 //        int arr[]={71, 94, 70, 74, 55, 51, 33, 37, 65, 36, 50, 89, 17, 55, 65};

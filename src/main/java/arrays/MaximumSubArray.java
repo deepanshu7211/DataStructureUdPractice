@@ -4,7 +4,25 @@ public class MaximumSubArray {
     public static void main(String[] args) {
         naiveSolution();
         kadensAlgorithm();
+        kadensAlgoAlternate();
 
+    }
+
+    private static void kadensAlgoAlternate(){
+        int arr[]={1,-3,2,1,-1};
+        int maxsum=0;
+        int cursum=0;
+        for(int i=0;i<arr.length;i++){
+            cursum=cursum+arr[i];
+            if(cursum>maxsum){
+                maxsum=cursum;
+            }
+            if (cursum <0){
+                // Discarding the left sub-array and starting fresh from the next element
+                cursum=0;
+            }
+        }
+        System.out.println(" kadensAlgoAlternate " + maxsum);
     }
 
     private static void kadensAlgorithm() {
